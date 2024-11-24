@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botiga Online</title>
+</head>
+<body>
+    <h1>Benvingut a la Botiga Online</h1>
+    <form action="cistella_compra.php" method="POST">
+        <h2>Productes</h2>
+        <div>
+            <p>Producte: Llibre</p>
+            <p>Preu: 10 €</p>
+            <label for="quantitat_llibres">Quantitat:</label>
+            <input type="number" id="quantitat_llibres" name="quantitat_llibres" value="0" min="0">
+        </div>
+        <div>
+            <p>Producte: Bolígrafs</p>
+            <p>Preu: 2 €</p>
+            <label for="quantitat_boligrafs">Quantitat:</label>
+            <input type="number" id="quantitat_boligrafs" name="quantitat_boligrafs" value="0" min="0">
+        </div>
+        <button type="submit" name="afegir">Afegir a la cistella</button>
+    </form>
+</body>
+</html>

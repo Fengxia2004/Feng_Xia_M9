@@ -21,10 +21,10 @@ $rows = mysqli_num_rows($query_verificacio);
 echo " ";
 echo "$rows";
 /*if($rows != 1){
-	header("location: index.html");
+	header("Location: index.html");
 }
 else{
-	header("Location: pag2.php")
+	header("Location: pag2.php");
 }*/
 
 

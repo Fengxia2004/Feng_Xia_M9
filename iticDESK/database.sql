@@ -1,5 +1,10 @@
-CREATE DATABASE IF NOT EXISTS feng_xia_iticdesk;
+CREATE USER 'feng'@'localhost' INDETIFIED BY 'feng';
 
+CREATE DATABASE feng_xia_iticdesk
+    
+GRANT ALL PRIVILEGIES ON feng_xia_iticdesk.* TO 'feng'@'localhost';
+FLUSH PRIVILEGES;
+    
 USE feng_xia_iticdesk;
 
 CREATE TABLE usuaris (
@@ -23,3 +28,7 @@ CREATE TABLE incidencies (
     estat ENUM('Oberta', 'Gestió', 'Tancada', 'Reoberta') DEFAULT 'Oberta',
     FOREIGN KEY (id_usuari) REFERENCES usuaris(id)
 );
+
+INSERT INTO usuaris (id, dni, nom, cognom, correu, contrasenya, rol) 
+VALUES (1, 'x9916862k', 'feng', 'xia', '2023_feng.xia@iticbcn.cat', 'xf5433998577', 'administrador');
+
